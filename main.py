@@ -18,13 +18,18 @@ for num in range(number_invations):
     # Name of the guest that are coming
         name_guest = input(" Name the guest that are invited: ")
         guest.append(number_invations)
-        print("name is been added to the guest list")
+        print("The peroson has been added to the guest list")
 
 # Print a message to each person
 for num in range(num_people): 
     print(f"Messaging {name_guest}")
     print(f"Hey {name_guest}! you have gotten a invatation to {name}'s dinner party")
 
+# Remove person from guest list
+while True:
+    take_off = input("Is their anyone you would like to take off the guest list? [y] or [no]")
+    if take_off == "y"
+        eleminate = input("")
 
 
 
