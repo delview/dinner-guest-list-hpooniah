@@ -19,7 +19,7 @@ for num in range(number_invations):
 # Print a message to each person
 print(f"Messaging {name_guest}")
 for guest_name in guest:
-    print(f"Hey {name_guest}! you have gotten a invatation to {name}'s dinner party")
+    print(f"Hey {guest_name}! you have gotten a invatation to {name}'s dinner party")
 
 # Remove person from guest list
 while True:
@@ -29,7 +29,7 @@ while True:
         if eliminate in guest:
             guest.remove(eliminate)
             print(f"{eliminate} is no longer on the guest list")
-            print(guest)
+            print(f"Updated guest list: {guest}")
             
             # Ask if they want to replace the person
             replace = input(f"Would you like to replace {eliminate} with someone else? [y] or [n]: ").lower()
@@ -39,8 +39,24 @@ while True:
                 print(f"An invitation has been sent to {join}.")
             elif replace == "n":
                 print("No replacement made.")
+        else:
+            print(f"{eliminate} was not on the list.")
+    elif take_off == "n":
+        print("No chnages made to the guest list.")
+        break
+
+    else:
+        print("Please enter [y] or [n]. ")
+# Print the list after the ajustments
+print("Final Guest List")
+guest.sort() 
+for guest_name in guest:
+    print(f"Hey {guest_name}! You have received an invation to {name}'s dinner party.")
+
+# Print the number of guest invited
+print(f"Total number of guest invited: {len(guest)}")
+
 
          
-
 
 
