@@ -1,6 +1,5 @@
-
 def dinner_invitation():
-    # greet the user
+    # Greet the user and ask for their name
     print("Hello there! This is a dinner guests invitation list.")
     name = input("Before we get started, what is your name? ").capitalize()
     print(f"Let's get started {name}!")
